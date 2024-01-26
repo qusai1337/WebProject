@@ -35,7 +35,7 @@
                     <h2 class="title">Sign Up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" id="name" placeholder="Name" />
+                        <input type="text" id="name" name="fullname" placeholder="Name" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-building"></i>
@@ -56,15 +56,15 @@
 
                     <div class="input-field">
                         <i class="fas fa-calender"></i>
-                        <input type="date" id="dob" placeholder="dob" />
+                        <input type="date" id="dob" name="dob" placeholder="dob" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" placeholder="Email" />
+                        <input type="email" id="email" name="emailD" placeholder="Email" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-phone"></i>
-                        <input type="tel" id="tel" placeholder="Phone Number" />
+                        <input type="tel" id="tel" name="tel" placeholder="Phone Number" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-address-card"></i>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-calender"></i>
-                        <input type="date" id="cc_exp" placeholder="CC_E Date" />
+                        <input type="date" id="cc_exp" name="CC_E" placeholder="CC_E Date" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-address-card"></i>
