@@ -45,13 +45,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+
     <div class="header-container1">
         <header>
             <nav>
                 <ul>
-                    <li><a href="inter.html">Home</a></li>
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="inter.php">Home</a></li>
+                    <li><a href="store.php">Store</a></li>
+                    <li><a href="about.php">About</a></li>
                 </ul>
             </nav>
         </header>
@@ -61,15 +62,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="signup">
                 <form action="signup3.php" method="POST" class="sign-up-form">
                     <h2 class="title">Sign Up - Step 2</h2>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-user"></i>
                         <input type="text" id="username" name="username" placeholder="Username" />
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-lock"></i>
-                        <input type="password" id="password" name="password" placeholder="Password" />
+                        <input type="password" id="passwordd" name="passwordd" placeholder="Password" />
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-lock"></i>
                         <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" />
                     </div>
@@ -78,7 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </form>
             </div>
         </div>
-    </div>
+    </div><?php include 'footer.html'; ?>
+
 </body>
 
 </html>

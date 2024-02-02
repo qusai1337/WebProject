@@ -1,3 +1,7 @@
+<?php session_start();
+
+include 'logHeader.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
     <style>
         body {
             background-image: url('images/logo.jpg');
-            background-size: 50%;
+            background-size: 40%;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
@@ -14,33 +18,40 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inter.css">
+    <link rel="stylesheet" href="inter.css"> 
+     <link rel="stylesheet" href="signup.css">
+
+
     <title>PS</title>
 </head>
 <body>    
 
+
     
-    
+    <div class="header-container1">
     <header>
 
         <nav>
             <ul>
-                <li><a href="inter.html">Home</a></li>
-                <li><a href="store.html">Store</a></li>
-                <li><a href="login.html">LogIn</a></li>
-                <li><a href="signup.php">SignUp</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class="souvenirs-title"><h2>PALESTINE SOUVENIRS</h2></li>
+                <li><a href="inter.php">Home</a></li>
+                <li><a href="store2.php">Store</a></li>
+                <li><a href="about2.php">About</a></li>
                 <li class="search-icon"><a href="#"><i class="fa fa-search"></i></a></li>
 
             </ul>
         </nav>
     </header>
+
     <div class="text-content">
         <h2>Welcome!!</h2>
         <h1>You Are In<br> Palestinain Souviners Market</h1>
-        <p><a href="store.html">Explore and Discover Amazing Souviners</a></p>
+        <p><a href="store.php">Explore and Discover Amazing Souviners</a></p>
+    </div>
+
     </div>
 
 
 </body>
+
 </html>

@@ -3,11 +3,11 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $passwordd = $_POST['passwordd'];
     $confirm_password = $_POST['confirm_password'];
 
     $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
+    $_SESSION['passwordd'] = $passwordd;
     $_SESSION['confirm_password'] = $confirm_password;
 
 }
@@ -42,13 +42,14 @@ $cc_bank = $_SESSION['cc_bank'];
 </head>
 
 <body>
+
     <div class="header-container1">
         <header>
             <nav>
                 <ul>
-                    <li><a href="inter.html">Home</a></li>
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="inter.php">Home</a></li>
+                    <li><a href="store.php">Store</a></li>
+                    <li><a href="about.php">About</a></li>
                 </ul>
             </nav>
         </header>
@@ -59,54 +60,54 @@ $cc_bank = $_SESSION['cc_bank'];
 
     <form action="baseSaver.php"  method="POST" class="sign-up-form">
                     <h2 class="title">Sign Up</h2>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-user"></i>
         <input type="text" id="name" name="name" value="<?php echo $name; ?>" required><br>
 
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-building"></i>
                         <input type="text" id="flat" name="flat" value="<?php echo $flat; ?>" required><br>
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-car"></i>
                         <input type="text" id="street" name="street" value="<?php echo $street; ?>" required><br>
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-city"></i>
                         <input type="text" id="city" name="city" value="<?php echo $city; ?>" required><br>
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-city"></i>
                         <input type="text" id="country" name="country" value="<?php echo $country; ?>" required><br>
                     </div>
 
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-calender"></i>
                         <input type="date" id="dob" name="dob" value="<?php echo $dob; ?>" required><br>
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-envelope"></i>
                         <input type="email" id="email" name="emailD" value="<?php echo $email; ?>" required><br>
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-phone"></i>
                         <input type="tel" id="tel" name="tel" value="<?php echo $tel; ?>" required><br>
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-address-card"></i>
                         <input type="text" id="cc_number" name="cc_number" value="<?php echo $cc_number; ?>" required><br>
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-calender"></i>
                         <input type="date" id="cc_exp" name="cc_exp" value="<?php echo $cc_exp; ?>" required><br>
                     </div>
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-address-card"></i>
                         <input type="text" id="cc_name" name="cc_name" value="<?php echo $cc_name; ?>" required><br>
                     </div>
 
-                    <div class="input-field">
+                    <div class="input">
                         <i class="fas fa-address-card"></i>
                         <input type="text" id="cc_bank" name="cc_bank" value="<?php echo $cc_bank; ?>" required><br>
                     </div>
@@ -125,6 +126,7 @@ $cc_bank = $_SESSION['cc_bank'];
 
 
 </body>
+<?php include 'footer.html'; ?>
 
 </html>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="inter.css">
 
     <title>About Palestinian Souvenirs</title>
@@ -11,15 +11,11 @@
 <body>
     <header>
 
+
+
         <nav>
             <ul>
-                <li><a href="inter.html">Home</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="login.html">LogIn</a></li>
-                <li><a href="#">SignUp</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="search-icon"><a href="#"><i class="fa fa-search"></i></a></li>
-
+                <li><a href="inter2.php">Home</a></li>
             </ul>
         </nav>
     </header>
@@ -35,5 +31,8 @@
             </div>
         </section>
     </main>
+    <?php include 'footer.html'; ?>
+
 </body>
+
 </html>

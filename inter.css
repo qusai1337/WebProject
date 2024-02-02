@@ -48,37 +48,3 @@
     color: #ff5733; 
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-header {
-    background-color: #ffffff; 
-    color: #0e0c0c; 
-    padding: 20px 0; 
-    text-align: center; 
-}
-
-nav ul {
-    display: flex; 
-    justify-content:space-around; 
-}
-
-nav li {
-    margin: 0 20px; 
-}
-
-nav a {
-    text-decoration: none; 
-    color: #212020; 
-    font-weight: bold; 
-    transition: color 0.3s; 
-}
-
-
-nav a:hover {
-    color: #ff5733; 
-}

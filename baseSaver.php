@@ -1,36 +1,40 @@
-<? 
+<?php
 require_once "dbconfig.in.php";
-session_start(); 
+session_start();
 function generateUniqueIDcus()
 {
-    $min = 1000000000; 
-    $max = 2000000000; 
+    $min = 1000000000;
+    $max = 2000000000;
 
     return mt_rand($min, $max);
 }
 $customersid = generateUniqueIDcus();
+try {
+    $pdo = new PDO(DBCONNSTRING, DBUSER, DBPASS);
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $stmtcust = $pdo->prepare("INSERT INTO customers (id, namee, flat ,street ,city ,country , dob,email, tel, c_c_number, c_c_e_date,c_c_name, c_c_bank, username,passwordd) 
+            VALUES (:id, :namee, :flat,:street,:city,:country, :dob,:email, :tel, :c_c_number,
+             :c_c_e_date,:c_c_name, :c_c_bank, :username, :passwordd)");
+    $stmtcust->bindValue(':id', $customersid);
+    $stmtcust->bindValue(':namee',  $_SESSION['fullname']);
+    $stmtcust->bindValue(':flat',$_SESSION['flat']);
+    $stmtcust->bindValue(':street', $_SESSION['street']);
+    $stmtcust->bindValue(':city', $_SESSION['city']);
+    $stmtcust->bindValue(':country', $_SESSION['country']);
+    $stmtcust->bindValue(':dob',  $_SESSION['dob']);
+    $stmtcust->bindValue(':email',$_SESSION['emailD']);
+    $stmtcust->bindValue(':tel', $_SESSION['tel']);
+    $stmtcust->bindValue(':c_c_number', $_SESSION['cc_number']);
+    $stmtcust->bindValue(':c_c_e_date', $_SESSION['CC_E']);
+    $stmtcust->bindValue(':c_c_name',  $_SESSION['cc_name']);
+    $stmtcust->bindValue(':c_c_bank', $_SESSION['cc_bank']);
+    $stmtcust->bindValue(':username', $_SESSION['username']);
+    $stmtcust->bindValue(':passwordd',   $_SESSION['passwordd']);
 
-try{
-$pdo = new PDO(DBCONNSTRING, DBUSER, DBPASS);
-$stmtCustomer = $pdo->prepare("INSERT INTO customers (id, name, address, dob, national_id ,email, tel, c_c_number, c_c_ex_date,c_c_name, c_c_bank, username,password) 
-            VALUES (:id, :name, :address, :dob, :national_id ,:email, :tel, :c_c_number,
-             :c_ce_date,:c_c_name, :c_c_bank, :username, :pasword)");
-            $stmtCustomer->bindValue(':id', $customersid);
-            $stmtCustomer->bindValue(':name',$name );
-            $stmtCustomer->bindValue(':address', $flat+$street+$city+$country);
-            $stmtCustomer->bindValue(':dob', $dob);
-            $stmtCustomer->bindValue(':national_id', $idNumber);
-            $stmtCustomer->bindValue(':email', $email);
-            $stmtCustomer->bindValue(':tel', $tel);
-            $stmtCustomer->bindValue(':c_c_number', $cc_number);
-            $stmtCustomer->bindValue(':c_c_e_date', $CC_E);
-            $stmtCustomer->bindValue(':cr_c_name', $cc_name);
-            $stmtCustomer->bindValue(':c_c_bank', $cc_bank);
-            $stmtCustomer->bindValue(':username', $username);
-            $stmtCustomer->bindValue(':pasword', $password);
-
-            $stmtCustomer->execute();
-} 
-catch (PDOException $e) {
+    $stmtcust->execute();
+    header('Location: inter.php');
+    exit();
+}
+} catch (PDOException $e) {
     die($e->getMessage());
 }
