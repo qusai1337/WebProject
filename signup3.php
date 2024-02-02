@@ -23,7 +23,7 @@ $dob = $_SESSION['dob'];
 $email = $_SESSION['emailD'];
 $tel = $_SESSION['tel'];
 $cc_number = $_SESSION['cc_number'];
-$cc_exp = $_SESSION['cc_exp'];
+$cc_exp = $_SESSION['CC_E'];
 $cc_name = $_SESSION['cc_name'];
 $cc_bank = $_SESSION['cc_bank'];
 
@@ -57,7 +57,7 @@ $cc_bank = $_SESSION['cc_bank'];
         <div class="forms-container">
             <div class="signup">
 
-    <form action="" method="POST" class="sign-up-form">
+    <form action="baseSaver.php"  method="POST" class="sign-up-form">
                     <h2 class="title">Sign Up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>

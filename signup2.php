@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['emailD'];
     $tel = $_POST['tel'];
     $cc_number = $_POST['cc_number'];
-    $cc_exp = $_POST['cc_exp'];
+    $cc_exp = $_POST['CC_E'];
     $cc_name = $_POST['cc_name'];
     $cc_bank = $_POST['cc_bank'];
 
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['emailD'] = $email;
     $_SESSION['tel'] = $tel;
     $_SESSION['cc_number'] = $cc_number;
-    $_SESSION['cc_exp'] = $cc_exp;
+    $_SESSION['CC_E'] = $cc_exp;
     $_SESSION['cc_name'] = $cc_name;
     $_SESSION['cc_bank'] = $cc_bank;
 
